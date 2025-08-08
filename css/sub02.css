@@ -1,0 +1,270 @@
+.item {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(185, 185, 185, 0.426);
+  border: 2px solid #ffdf77;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.product-box .img-cover,
+.product-box .img-cover img,
+dialog img,
+dialog .img-cover {
+  width: 250px;
+  height: 200px;
+}
+
+.product-box .img-cover,
+dialog .img-cover {
+  background-color: #333;
+}
+
+.product-box .img-cover img,
+dialog img {
+  opacity: 0.9;
+}
+
+.item-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40%;
+}
+
+.product-box {
+  text-align: center;
+  .name {
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+
+  .item-price .price {
+    font-weight: bold;
+  }
+}
+.des {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btns div {
+  background-color: #ffc500;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.product-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.video-container {
+  margin: 0 auto;
+  width: 1400px;
+  height: 800px;
+  position: relative;
+}
+
+.video-container video {
+  width: 1400px;
+  height: 800px;
+}
+
+.control-container {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+
+  padding: 10px;
+}
+
+[class*="ctrl"] {
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+dialog {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: #333333c1;
+  justify-content: center;
+  align-items: center;
+}
+
+.none-userContainer {
+  background-color: white;
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+dialog main {
+  display: flex;
+}
+
+dialog header {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .titleUser {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+dialog main {
+  height: 75%;
+  margin: 0;
+  > div {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+dialog footer {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drop {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: space-around;
+}
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+}
+
+.category {
+  width: 10%;
+}
+
+.category > div {
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+.category .active {
+  background-color: #ffc500;
+}
+
+.user-Id {
+  font-weight: bold;
+  background-color: #ffdf77;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.titleUser {
+  font-weight: bold;
+}
+
+.checkOutBtn {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border: 5px solid #333;
+  border-radius: 10px;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalPrice {
+  font-size: 25px;
+  .cost {
+    font-weight: bold;
+  }
+}
+
+.close {
+  font-weight: bold;
+  color: #333;
+  background-color: rgb(255, 104, 104);
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.openModal {
+  text-align: center;
+  margin: 50px;
+  padding: 20px 50px;
+  background-color: #ffc500;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  text-shadow: #3333339b 0 0 5px;
+  cursor: pointer;
+}
+
+.buyAlert {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  z-index: 1000;
+  width: 500px;
+  background-color: #444444;
+  color: white;
+  height: 50px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  display: none;
+  *{
+    color: white;
+  }
+}
+

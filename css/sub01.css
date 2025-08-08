@@ -1,0 +1,77 @@
+.about-container {
+  display: flex;
+  border: 5px solid #ffc500;
+  border-radius: 20px;
+}
+
+.about-container img {
+  background-color: #333;
+  width: 500px;
+  height: 500px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.mottos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.mottoName {
+  position: absolute;
+  bottom: 50px;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  right: 20%;
+  text-align: center;
+  line-height: 40px;
+  background-color: white;
+  border: 5px solid #ffc500;
+  border-radius: 10px;
+}
+
+.mottos > div {
+  position: relative;
+  width: 250px;
+  height: 700px;
+  transition: 0.3s;
+}
+
+.mottos > .motto01 {
+  background: url(../img/motto/motto01.png) 0 0;
+}
+.mottos > .motto02 {
+  background: url(../img/motto/motto02.png) -250px 0;
+}
+.mottos > .motto03 {
+  background: url(../img/motto/motto03.png) -500px 0;
+}
+.mottos > .motto04 {
+  background: url(../img/motto/motto04.png) -750px 0;
+}
+.mottos > .motto05 {
+  background: url(../img/motto/motto05.png) -1000px 0;
+}
+
+.desContianer > div {
+  opacity: 0;
+  cursor: default;
+  position: absolute;
+  top: 0;
+  background-color: #ffc500;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: justify;
+  margin: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+

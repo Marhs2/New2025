@@ -1,0 +1,233 @@
+.filter label {
+  cursor: pointer;
+}
+
+#heal:checked ~ .filter label[for="heal"] {
+  background-color: #333;
+  color: white;
+}
+#digi:checked ~ .filter label[for="digi"] {
+  background-color: #333;
+  color: white;
+}
+#fancy:checked ~ .filter label[for="fancy"] {
+  background-color: #333;
+  color: white;
+}
+#smell:checked ~ .filter label[for="smell"] {
+  background-color: #333;
+  color: white;
+}
+#hair:checked ~ .filter label[for="hair"] {
+  background-color: #333;
+  color: white;
+}
+
+.items > div {
+  display: none;
+}
+
+#heal:checked ~ .product-box .items.건강식품 div {
+  display: flex;
+}
+#digi:checked ~ .product-box .items.디지털 div {
+  display: flex;
+}
+#fancy:checked ~ .product-box .items.팬시 div {
+  display: flex;
+}
+#smell:checked ~ .product-box .items.향수 div {
+  display: flex;
+}
+#hair:checked ~ .product-box .items.헤어케어 div {
+  display: flex;
+}
+
+.filter label {
+  width: 150px;
+  height: 50px;
+  background-color: #ffc500;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+/*필터 */
+
+.item {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(185, 185, 185, 0.426);
+  border: 2px solid #ffdf77;
+}
+
+.product-box .img-cover,
+.product-box .img-cover img {
+  width: 300px;
+  height: 250px;
+}
+
+.product-box .img-cover {
+  background-color: #333;
+}
+
+.product-box .img-cover img {
+  opacity: 0.9;
+}
+
+.item-content {
+  width: 60%;
+  height: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product-box {
+  .name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .item-price .price {
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+.des {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.notice-move {
+  font-size: 3rem;
+  margin: 30px auto;
+  width: fit-content;
+}
+.notice-move .fa {
+  cursor: pointer;
+  margin: 0 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice-content {
+  margin: 20px auto;
+  width: fit-content;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  font-size: 30px;
+  padding: 5px;
+  background-color: #ffc500;
+}
+
+table td {
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  font-size: 1.1rem;
+}
+
+.enter-banner {
+  width: 50%;
+  height: 30vh;
+  background-color: #ffc500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 60px;
+
+  border-radius: 20px;
+  margin: 20px auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+[class*="banner-box"] > div {
+  border-radius: 10px;
+  width: 25rem;
+  background-color: #ffc500;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 1.8rem;
+  color: white;
+  box-shadow: inset 0 0 100px rgba(209, 209, 209, 0.105);
+  i {
+    color: white;
+    margin: 10px;
+  }
+}
+
+.fa.fa-caret-righ {
+  width: 5px;
+  height: 5px;
+  color: #333;
+}
+
+.step-contnet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.step-contnet > div {
+  height: 250px;
+  width: 200px;
+  text-align: center;
+  border: 5px solid #ffc500;
+  border-radius: 10px;
+}
+
+.step-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.step-title {
+  background-color: #ffc500;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="radio"] {
+  display: none;
+}

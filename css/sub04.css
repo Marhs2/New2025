@@ -1,0 +1,95 @@
+.item {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(185, 185, 185, 0.426);
+  border: 2px solid #ffdf77;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.product-box .img-cover,
+.product-box .img-cover img {
+  width: 250px;
+  height: 200px;
+}
+
+.product-box .img-cover {
+  background-color: #333;
+}
+
+.product-box .img-cover img {
+  opacity: 0.9;
+}
+
+.item-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40%;
+}
+
+.product-box {
+  border: 2px solid #ffc500;
+  padding: 20px;
+  border-radius: 20px1;
+  .name {
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+
+  .item-price .price {
+    font-weight: bold;
+  }
+}
+.des {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btns div {
+  background-color: #ffc500;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.item-total {
+  text-align: center;
+}
+
+.checkout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffc500;
+  margin: 50px 0;
+  height: 10vh;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.checkout button {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
