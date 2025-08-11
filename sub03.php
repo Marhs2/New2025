@@ -14,61 +14,9 @@
 
 <body>
   <!-- 헤더 -->
-  <header>
-    <a href="./index.php">
-      <img src="./img/logo.png" alt="logo" />
-    </a>
-    <nav>
-      <ul class="nav1">
-        <li>
-          <a href="./sub01.php">소개</a>
-          <ul class="dropdown1">
-            <li><a href="#">#</a></li>
-            <li><a href="#">#</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="./sub02.php">판매상품</a>
-          <ul class="dropdown2">
-            <li><a href="./sub02.php">전체상품</a></li>
-            <li><a href="./sub03.php">인기상품</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">가맹점</a>
-          <ul class="dropdown3">
-            <li><a href="#">#</a></li>
-            <li><a href="#">#</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">장바구니</a>
-          <ul class="dropdown4">
-            <li><a href="#">#</a></li>
-            <li><a href="#">#</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav2">
-        <li>
-          <a href="#">로그인</a>
-        </li>
-        <li>
-          <a href="#">회원가입</a>
-        </li>
-        <li>
-          <a href="#">장바구니</a>
-        </li>
-        <li>
-          <a href="#">관리자</a>
-          <ul class="dropdown4">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <?php require_once "./test/header.php" ?>
+  <iframe src="./user/login.html" style="border-radius:20px;box-shadow: 0 0 2px #333" frameborder="0" scrolling='no' width="700px" height="700px" class="login"></iframe>
+  <iframe src="./user/reg.html" style="box-shadow: 0 0 2px #333;border-radius:20px" frameborder="0" scrolling='no' width="700px" height="700px" class="reg"></iframe>
   <!-- 메인 -->
 
   <main>

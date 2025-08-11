@@ -231,3 +231,53 @@ table td {
 input[type="radio"] {
   display: none;
 }
+.filterBtns {
+  display: flex;
+  justify-content: space-around;
+  & > div {
+    display: flex;
+    font-size: 20px;
+    gap: 10px;
+  }
+}
+
+.thead {
+  width: 1400px;
+  height: 80px;
+  background-color: #ffc500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & > p {
+    width: calc(1400px / 3);
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+.tbody {
+  width: 1400px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden;
+  & .notice {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    & p {
+      width: calc(1400px / 3);
+      text-align: center;
+    }
+  }
+}
+
+.notice-con {
+  height: 300px;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}

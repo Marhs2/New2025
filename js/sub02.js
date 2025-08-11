@@ -252,3 +252,11 @@ function userBuy() {
 
 cart()
 dragAndDrop()
+
+const cartBtns = $$(".get")
+
+cartBtns.forEach((e) => {
+  e.addEventListener("click", (event) => {
+    console.log(event)
+  })
+})

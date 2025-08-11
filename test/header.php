@@ -34,7 +34,7 @@ $ss = $_SESSION["ss"] ?? null;
         </ul>
       </li>
       <li>
-        <a href="#">장바구니</a>
+        <a href="./sub04.php">장바구니</a>
         <ul class="dropdown4">
           <li><a href="#">#</a></li>
           <li><a href="#">#</a></li>
@@ -44,19 +44,24 @@ $ss = $_SESSION["ss"] ?? null;
 
     <?php if (isset($ss) && $ss->isAdmin == "1") { ?>
       <ul class="nav2">
-        <li><a href="#">장바구니</a></li>
-        <li><a href="#">관리자</a></li>
+        <li><a href="./sub04.php">장바구니</a></li>
+        <li><a href="#">관리자</a>
+          <ul class="dropDown">
+            <li><a href="#">공지사항관리</a></li>
+            <li><a href="#">판매상품관리</a></li>
+          </ul>
+        </li>
         <li>
           <form action="logout.php" method="post" style="display:inline; font-weight: bold;">
             <button type="submit">로그아웃</button>
           </form>
         </li>
       </ul>
-      ?>
+
     <?php } else if (isset($ss) && $ss->id) { ?>
       <ul class="nav2">
         <li><a href="#" class="user"><?= $ss->id ?>님</a></li>
-        <li><a href="#">장바구니</a></li>
+        <li><a href="./sub04.php">장바구니</a></li>
         <li>
           <form action="logout.php" method="post" style="display:inline;font-weight: bold;">
             <button type="submit">로그아웃</button>
@@ -67,7 +72,7 @@ $ss = $_SESSION["ss"] ?? null;
       <ul class="nav2">
         <li><a href="#" class="loginOpen">로그인</a></li>
         <li><a href="#" class="regOpen">회원가입</a></li>
-        <li><a href="#">장바구니</a></li>
+        <li><a href="./sub04.php">장바구니</a></li>
       </ul>
     <?php } ?>
 

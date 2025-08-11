@@ -416,165 +416,148 @@
       <div class="title">NOTICE</div>
       <div class="notice">
         <div class="notice-move">
-          <i class="fa fa-chevron-left"></i>
+          <i class="fa fa-chevron-left" onclick="moveLeft()"></i>
           <span><span class="page">1</span> 페이지</span>
-          <i class="fa fa-chevron-right"></i>
+          <i class="fa fa-chevron-right" onclick="moveRight()"></i>
+          <div class="filterBtns">
+            <div class="date">
+              <div class="desc" onclick="desc()">desc</div>
+              <div class="asc" onclick="asc()">asc</div>
+            </div>
+
+            <div class="type">
+              <div class="normarl" onclick="normarl()">일반</div>
+              <div class="event" onclick="even()">이벤트</div>
+            </div>
+
+          </div>
         </div>
         <div class="notice-content">
-          <table>
-            <thead>
-              <tr>
-                <th>종류</th>
-                <th>제목</th>
-                <th>날짜</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>이벤트</td>
-                <td>24년 7월 &lt;헬스+출석체크인&gt; 이벤트 당첨자 공지</td>
-                <td>2024.08.08</td>
-              </tr>
-              <tr>
-                <td>이벤트</td>
-                <td>7월 [기프트몰TV 보러갈래?] 이벤트 당첨자 발표</td>
-                <td>2024.08.07</td>
-              </tr>
-              <tr>
-                <td>일반</td>
-                <td>딘토 이벤트 조기 종료 안내</td>
-                <td>2024.08.05</td>
-              </tr>
-              <tr>
-                <td>일반</td>
-                <td>[배송안내] 8/14(수)~8/15(목) 택배사 휴무 관련</td>
-                <td>2024.08.06</td>
-              </tr>
-              <tr>
-                <td>일반</td>
-                <td>하월곡점 폐점으로 인한 영업종료 안내</td>
-                <td>2024.07.31</td>
-              </tr>
-              <tr>
-                <td>일반</td>
-                <td>양평점 리로케이션으로 인한 영업 중단 안내</td>
-                <td>2024.07.31</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="support-enter">
-      <div class="title">SUPPORT/ENTER</div>
-      <div class="enter-banner">
-        대한민국 No.1 <br />
-        GIFTS:Mall과 함께 할 WIN-WIN 파트너를 찾습니다. <br />
-        제휴사의 많은 지원을 기다립니다.
-      </div>
-      <div class="title">BANNER</div>
-      <div class="banner-container">
-        <div class="banner-box1">
-          <div class="banner1">
-            <i class="fa fa-cart-plus"></i> 상품입점/제휴문의
+          <div class="thead">
+            <p>종류</p>
+            <p>제목</p>
+            <p>날짜</p>
           </div>
-          <div class="banner2"><i class="fa fa-search"></i>문의결과조회</div>
-        </div>
-        <div class="banner-box2">
-          <div class="banner1">
-            <i class="fa fa-pencil"></i>전자계약시스템
-          </div>
-          <div class="banner2">
-            <i class="fa fa-street-view"></i>파트너시스템
-          </div>
-        </div>
-      </div>
-      <div class="step-container">
-        <div class="title">STEP</div>
-        <div class="step-contnet">
-          <div class="step1">
-            <div class="step-content">
-              <div class="step-stage">
-                <i class="fa fa-user-plus"></i> 1단계
-              </div>
-              <div class="step-sub">
-                미거래 업체는 임시회원 가입/로그인 후 상담신청을 하실 수
-                있습니다.
-              </div>
-              <div class="step-title">임시회원가입</div>
-            </div>
-          </div>
-          <i class="fa fa-caret-right"></i>
-          <div class="step2">
-            <div class="step-content">
-              <div class="step-stage"><i class="fa fa-phone"></i> 2단계</div>
-              <div class="step-sub">
-                GIFTS:Mall 입점/제휴를 위해서는 온라인 상담이 선행되어야
-                합니다. 상담 문의 후 사이트를 통해 결과를 안내해 드립니다.
-              </div>
-              <div class="step-title">온라인상담</div>
-            </div>
-          </div>
-          <i class="fa fa-caret-right"></i>
+          <div class="tbody">
 
-          <div class="step3">
-            <div class="step-content">
-              <div class="step-stage">
-                <i class="fa-building-o fa"></i>
-                3단계
-              </div>
-              <div class="step-sub">
-                온라인 상담이 긍정적일 경우, 담당MD/제휴담당자와 구체적인
-                상담을 진행하게 됩니다.
-              </div>
-              <div class="step-title">방문상담</div>
+            <div class="notice-con">
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="support-enter">
+        <div class="title">SUPPORT/ENTER</div>
+        <div class="enter-banner">
+          대한민국 No.1 <br />
+          GIFTS:Mall과 함께 할 WIN-WIN 파트너를 찾습니다. <br />
+          제휴사의 많은 지원을 기다립니다.
+        </div>
+        <div class="title">BANNER</div>
+        <div class="banner-container">
+          <div class="banner-box1">
+            <div class="banner1">
+              <i class="fa fa-cart-plus"></i> 상품입점/제휴문의
+            </div>
+            <div class="banner2"><i class="fa fa-search"></i>문의결과조회</div>
+          </div>
+          <div class="banner-box2">
+            <div class="banner1">
+              <i class="fa fa-pencil"></i>전자계약시스템
+            </div>
+            <div class="banner2">
+              <i class="fa fa-street-view"></i>파트너시스템
             </div>
           </div>
-          <i class="fa fa-caret-right"></i>
-          <div class="step4">
-            <div class="step-content">
-              <div class="step-stage">
-                <i class="fa fa-edit (alias)"></i>
-                4단계
+        </div>
+        <div class="step-container">
+          <div class="title">STEP</div>
+          <div class="step-contnet">
+            <div class="step1">
+              <div class="step-content">
+                <div class="step-stage">
+                  <i class="fa fa-user-plus"></i> 1단계
+                </div>
+                <div class="step-sub">
+                  미거래 업체는 임시회원 가입/로그인 후 상담신청을 하실 수
+                  있습니다.
+                </div>
+                <div class="step-title">임시회원가입</div>
               </div>
-              <div class="step-sub">
-                공정한 평가를 위해 상품력, 기획력, 영업력, 판촉력 등의 항목을
-                기준으로 내부 품평회를 진행합니다.
-              </div>
-              <div class="step-title">품평회</div>
             </div>
-          </div>
-          <i class="fa fa-caret-right"></i>
-          <div class="step5">
-            <div class="step-content">
-              <div class="step-stage">
-                <i class="fa fa-eye"></i>
-                5단계
+            <i class="fa fa-caret-right"></i>
+            <div class="step2">
+              <div class="step-content">
+                <div class="step-stage"><i class="fa fa-phone"></i> 2단계</div>
+                <div class="step-sub">
+                  GIFTS:Mall 입점/제휴를 위해서는 온라인 상담이 선행되어야
+                  합니다. 상담 문의 후 사이트를 통해 결과를 안내해 드립니다.
+                </div>
+                <div class="step-title">온라인상담</div>
               </div>
-              <div class="step-sub">
-                입점확정 협력사의 경우 신뢰있는 거래를 위해 신용평가를 받고
-                있습니다.
-              </div>
-              <div class="step-title">신용평가</div>
             </div>
-          </div>
-          <i class="fa fa-caret-right"></i>
-          <div class="step6">
-            <div class="step-content">
-              <div class="step-stage">
-                <i class="fa fa-pencil-square-o"></i>
-                6단계
+            <i class="fa fa-caret-right"></i>
+
+            <div class="step3">
+              <div class="step-content">
+                <div class="step-stage">
+                  <i class="fa-building-o fa"></i>
+                  3단계
+                </div>
+                <div class="step-sub">
+                  온라인 상담이 긍정적일 경우, 담당MD/제휴담당자와 구체적인
+                  상담을 진행하게 됩니다.
+                </div>
+                <div class="step-title">방문상담</div>
               </div>
-              <div class="step-sub">
-                전자계약서(또는 수기계약서)를 통해 거래계약서와 관련서류를
-                작성하시면 입점절차가 완료됩니다.
+            </div>
+            <i class="fa fa-caret-right"></i>
+            <div class="step4">
+              <div class="step-content">
+                <div class="step-stage">
+                  <i class="fa fa-edit (alias)"></i>
+                  4단계
+                </div>
+                <div class="step-sub">
+                  공정한 평가를 위해 상품력, 기획력, 영업력, 판촉력 등의 항목을
+                  기준으로 내부 품평회를 진행합니다.
+                </div>
+                <div class="step-title">품평회</div>
               </div>
-              <div class="step-title">계약체결</div>
+            </div>
+            <i class="fa fa-caret-right"></i>
+            <div class="step5">
+              <div class="step-content">
+                <div class="step-stage">
+                  <i class="fa fa-eye"></i>
+                  5단계
+                </div>
+                <div class="step-sub">
+                  입점확정 협력사의 경우 신뢰있는 거래를 위해 신용평가를 받고
+                  있습니다.
+                </div>
+                <div class="step-title">신용평가</div>
+              </div>
+            </div>
+            <i class="fa fa-caret-right"></i>
+            <div class="step6">
+              <div class="step-content">
+                <div class="step-stage">
+                  <i class="fa fa-pencil-square-o"></i>
+                  6단계
+                </div>
+                <div class="step-sub">
+                  전자계약서(또는 수기계약서)를 통해 거래계약서와 관련서류를
+                  작성하시면 입점절차가 완료됩니다.
+                </div>
+                <div class="step-title">계약체결</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </main>
   <footer>
     <div class="footer-container">
@@ -624,6 +607,7 @@
   </footer>
   <script src="./js/lib.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/notice.js"></script>
 </body>
 
 </html>
