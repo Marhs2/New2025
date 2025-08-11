@@ -199,8 +199,8 @@ async function cart() {
     .then(data => {
       cartContianer.innerHTML = ''
 
-      Object.keys(data["product"][cate]).forEach((e) => {
-        const item = data["product"][cate][e]
+      Object.keys(data[cate]).forEach((e) => {
+        const item = data[cate][e]
         cartContianer.innerHTML += `
                <div class="item">
             <div class="img-cover">
@@ -211,7 +211,7 @@ async function cart() {
               />
             </div>
             <div class="item-content">
-              <div class="name">${item.title.replace("상품명:", "")}</div>
+              <div class="name">${item.title}</div>
               <div class="item-price">
                 가격:
                 <span class="price">${item.price}</span>
@@ -257,6 +257,9 @@ const cartBtns = $$(".get")
 
 cartBtns.forEach((e) => {
   e.addEventListener("click", (event) => {
-    console.log(event)
+    fetch(`./addCart.php?id=${e.closest(".item").getAttribute("data-id")}`)
+      .then(data => {
+        console.log(data.status == 200)
+      })
   })
 })

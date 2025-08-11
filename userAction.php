@@ -37,8 +37,7 @@ if ($type == "login") {
   if (DB::fetch("select * from user where id = '$id'")) {
     alert("이미 같은 아이디의 사용자가 있습니다");
   } else {
-    DB::exec("INSERT INTO user( id, name, psw, salt, mail) VALUES ('$id','$name','$h_psw','$salt','$mail')");
-    alert("로그인 성공");
+    alert("회원가입 성공");
   }
   selectMove("./user/reg.html");
 }

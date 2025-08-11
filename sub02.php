@@ -42,516 +42,180 @@
     <div class="title">ALL PRODUCT</div>
     <div class="product-box">
       <div class="items 건강식품">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/1.PNG"
-              alt="건강식품-1"
-              title="건강식품-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">이뮨 멀티비타민&amp;미네랄</div>
-            <div class="item-price">
-              가격:
-              <span class="price">65,000</span>
-              <span class="discount lnt">75,000</span>
+        <?php $heal =  DB::fetchAll("select * from item where cate = '건강식품'");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item" data-id="<?= $val->idx ?>">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="건강식품-<?= $key ?>"
+                title="건강식품-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/2.PNG"
-              alt="건강식품-2"
-              title="건강식품-2" />
-          </div>
-          <div class="item-content">
-            <div class="name">센트룸</div>
-            <div class="item-price">
-              가격:
-              <span class="price">27,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/3.PNG"
-              alt="건강식품-3"
-              title="건강식품-3" />
-          </div>
-          <div class="item-content">
-            <div class="name">닥터브라이언</div>
-            <div class="item-price">
-              가격:
-              <span class="price">2,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/4.PNG"
-              alt="건강식품-4"
-              title="건강식품-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">액티브 멀티포맨</div>
-            <div class="item-price">
-              가격:
-              <span class="price">30,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/5.PNG"
-              alt="건강식품-5"
-              title="건강식품-5" />
-          </div>
-          <div class="item-content">
-            <div class="name">네이처메이드B12</div>
-            <div class="item-price">
-              가격:
-              <span class="price">30,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="items 디지털">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/4.PNG"
-              alt="디지털-4"
-              title="디지털-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">파이널마우스 스타라이트12 페가수스 미디엄</div>
-            <div class="item-price">
-              가격:
-              <span class="price">1,128,600</span>
-              <span class="discount lnt">1,254,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/1.PNG"
-              alt="디지털-1"
-              title="디지털-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">PANTONE PD충전 보조배터리</div>
-            <div class="item-price">
-              가격:
-              <span class="price">24,400</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php $heal =  DB::fetchAll("select * from item where cate = '디지털'  order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item" data-id="<?= $val->idx ?>">
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/2.PNG"
-              alt="디지털-2"
-              title="디지털-2" />
-          </div>
-          <div class="item-content">
-            <div class="name">Bowie D05 무선 블루투스 5.3 헤드셋</div>
-            <div class="item-price">
-              가격:
-              <span class="price">36,900</span>
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="디지털-<?= $key ?>"
+                title="디지털-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/3.PNG"
-              alt="디지털-3"
-              title="디지털-3" />
-          </div>
-          <div class="item-content">
-            <div class="name">독거미 F99 기계식 키보드</div>
-            <div class="item-price">
-              가격:
-              <span class="price">70,750</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/5.PNG"
-              alt="디지털-5"
-              title="디지털-5" />
-          </div>
-          <div class="item-content">
-            <div class="name">보이저5200 블루투스 이어폰</div>
-            <div class="item-price">
-              가격:
-              <span class="price">146,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="items 팬시">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/4.PNG"
-              alt="팬시-4"
-              title="팬시-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">게이밍 이어폰 VJJB NI</div>
-            <div class="item-price">
-              가격:
-              <span class="price">28,900</span>
-              <span class="discount lnt">38,900</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/1.PNG"
-              alt="팬시-1"
-              title="팬시-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">명품 자동 장우산</div>
-            <div class="item-price">
-              가격:
-              <span class="price">31,600</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php $heal =  DB::fetchAll("select * from item where cate = '팬시' order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item" data-id="<?= $val->idx ?>">
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/2.PNG"
-              alt="팬시-2"
-              title="팬시-2" />
-          </div>
-          <div class="item-content">
-            <div class="name">14K 윙블링 원터치 링 귀걸이(주문제작)</div>
-            <div class="item-price">
-              가격:
-              <span class="price">250,000</span>
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="팬시-<?= $key ?>"
+                title="팬시-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/3.PNG"
-              alt="팬시-3"
-              title="팬시-3" />
-          </div>
-          <div class="item-content">
-            <div class="name">14K 윙블링 메르시 목걸이(주문제작)</div>
-            <div class="item-price">
-              가격:
-              <span class="price">265,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/5.PNG"
-              alt="팬시-5"
-              title="팬시-5" />
-          </div>
-          <div class="item-content">
-            <div class="name">인스탁스 미니 에보</div>
-            <div class="item-price">
-              가격:
-              <span class="price">320,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="items 향수">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/4.PNG"
-              alt="향수-4"
-              title="향수-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">몽블랑 익스플로러 EDP 60ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">93,000</span>
-              <span class="discount lnt">103,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/1.PNG"
-              alt="향수-1"
-              title="향수-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">에스쁘아 솔리드 퍼퓸 4.2g</div>
-            <div class="item-price">
-              가격:
-              <span class="price">26,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php $heal =  DB::fetchAll("select * from item where cate = '향수'  order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item" data-id="<?= $val->idx ?>">
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/2.PNG"
-              alt="향수-2"
-              title="향수-2" />
-          </div>
-          <div class="item-content">
-            <div class="name">호텔도슨 향수 오드퍼퓸 75ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">153,000</span>
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="향수-<?= $key ?>"
+                title="향수-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/3.PNG"
-              alt="향수-3"
-              title="향수-3" />
-          </div>
-          <div class="item-content">
-            <div class="name">랑방 레 플레르 EDT 90ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">64,500</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/5.PNG"
-              alt="향수-5"
-              title="향수-5" />
-          </div>
-          <div class="item-content">
-            <div class="name">캘빈클라인 One EDT 50ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">58,900</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="items 헤어케어">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/5.PNG"
-              alt="헤어케어-5"
-              title="헤어케어-5" />
-          </div>
-          <div class="item-content">
-            <div class="name">
-              닥터포헤어 피토프레시 헤어쿨링 스프레이 150ml
-            </div>
-            <div class="item-price">
-              가격:
-              <span class="price">14,400</span>
-              <span class="discount lnt">16,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php $heal =  DB::fetchAll("select * from item where cate = '헤어케어' order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item" data-id="<?= $val->idx ?>">
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/1.PNG"
-              alt="헤어케어-1"
-              title="헤어케어-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">어노브 딥 데미지 트리트먼트 EX 더블</div>
-            <div class="item-price">
-              가격:
-              <span class="price">29,800</span>
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="헤어케어-<?= $key ?>"
+                title="헤어케어-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <?php if ($val->discount === 0) { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <?php } else { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                    <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                  <?php } ?>
+                <?php } else { ?>
+                  <?php if ($val->discount === 0) { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <?php } else { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                    <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                  <?php } ?>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/2.PNG"
-              alt="헤어케어-2"
-              title="헤어케어-2" />
-          </div>
-          <div class="item-content">
-            <div class="name">
-              려 루트젠 여성맞춤 볼륨 탈모증상케어 샴퓨 353ml
-            </div>
-            <div class="item-price">
-              가격:
-              <span class="price">21,900</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/3.PNG"
-              alt="헤어케어-3"
-              title="헤어케어-3" />
-          </div>
-          <div class="item-content">
-            <div class="name">라보에이치 두피쿨링&amp;노세범 샴푸 333ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">19,800</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/4.PNG"
-              alt="헤어케어-4"
-              title="헤어케어-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">모로칸오일 헤어트리트먼트 100ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">52,200</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
       </div>
+
     </div>
   </main>
   <div class="buyAlert">

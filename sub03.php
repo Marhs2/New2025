@@ -23,116 +23,174 @@
     <div class="title">POPULAR PRODUCT</div>
     <div class="product-box">
       <div class="items 건강식품">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/건강식품/1.PNG"
-              alt="건강식품-1"
-              title="건강식품-1" />
-          </div>
-          <div class="item-content">
-            <div class="name">이뮨 멀티비타민&amp;미네랄</div>
-            <div class="item-price">
-              가격:
-              <span class="price">65,000</span>
-              <span class="discount lnt">75,000</span>
+        <?php $heal =  DB::fetchAll("select * from item where  discount != 0 and  cate = '건강식품'");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="건강식품-<?= $key ?>"
+                title="건강식품-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
+
+        <?php } ?>
+
       </div>
       <div class="items 디지털">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/디지털/4.PNG"
-              alt="디지털-4"
-              title="디지털-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">파이널마우스 스타라이트12 페가수스 미디엄</div>
-            <div class="item-price">
-              가격:
-              <span class="price">1,128,600</span>
-              <span class="discount lnt">1,254,000</span>
+        <?php $heal =  DB::fetchAll("select * from item where discount != 0 and cate = '디지털'  order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="디지털-<?= $key ?>"
+                title="디지털-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
+
+        <?php } ?>
+
       </div>
       <div class="items 팬시">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/팬시/4.PNG"
-              alt="팬시-4"
-              title="팬시-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">게이밍 이어폰 VJJB NI</div>
-            <div class="item-price">
-              가격:
-              <span class="price">28,900</span>
-              <span class="discount lnt">38,900</span>
+        <?php $heal =  DB::fetchAll("select * from item where  discount != 0 and  cate = '팬시' order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="팬시-<?= $key ?>"
+                title="팬시-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
+
+        <?php } ?>
+
       </div>
       <div class="items 향수">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/향수/4.PNG"
-              alt="향수-4"
-              title="향수-4" />
-          </div>
-          <div class="item-content">
-            <div class="name">몽블랑 익스플로러 EDP 60ml</div>
-            <div class="item-price">
-              가격:
-              <span class="price">93,000</span>
-              <span class="discount lnt">103,000</span>
+        <?php $heal =  DB::fetchAll("select * from item where  discount != 0 and  cate = '향수'  order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="향수-<?= $key ?>"
+                title="향수-2" />
             </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                <?php } else { ?>
+                  <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
             </div>
           </div>
-        </div>
+
+        <?php } ?>
+
       </div>
       <div class="items 헤어케어">
-        <div class="item">
-          <div class="img-cover">
-            <img
-              src="./asset/images/헤어케어/5.PNG"
-              alt="헤어케어-5"
-              title="헤어케어-5" />
+        <?php $heal =  DB::fetchAll("select * from item where  discount != 0 and  cate = '헤어케어' order by discount desc");
+        foreach ($heal as $key => $val) {
+        ?>
+          <div class="item">
+            <div class="img-cover">
+              <img
+                src="<?= $val->img ?>"
+                alt="헤어케어-<?= $key ?>"
+                title="헤어케어-2" />
+            </div>
+            <div class="item-content">
+              <div class="name"><?= $val->title ?></div>
+              <div class="item-price">
+                가격:
+                <?php if ($val->discount === 0) { ?>
+                  <?php if ($val->discount === 0) { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <?php } else { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                    <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                  <?php } ?>
+                <?php } else { ?>
+                  <?php if ($val->discount === 0) { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                  <?php } else { ?>
+                    <span class="price"><?= number_format($val->price, 0, ".", ",") ?></span>
+                    <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                  <?php } ?>
+                  <span class="discount" style="text-decoration: line-through;"><?= number_format($val->discount, 0, ".", ",") ?></span>
+                <?php } ?>
+              </div>
+              <div class="btns">
+                <div class="buy">구매하기</div>
+                <div class="get">장바구니담기</div>
+              </div>
+            </div>
           </div>
-          <div class="item-content">
-            <div class="name">
-              닥터포헤어 피토프레시 헤어쿨링 스프레이 150ml
-            </div>
-            <div class="item-price">
-              가격:
-              <span class="price">14,400</span>
-              <span class="discount lnt">16,000</span>
-            </div>
-            <div class="btns">
-              <div class="buy">구매하기</div>
-              <div class="get">장바구니담기</div>
-            </div>
-          </div>
-        </div>
+
+        <?php } ?>
+
       </div>
     </div>
   </main>
